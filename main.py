@@ -31,7 +31,7 @@ def index():
 def get_info_taxi(n):
     with connection:
         with connection.cursor() as cursor:
-            cursor.execute('Select taxi_name, tarif_name, price from taxi, choice, cars where cars.car_id = {0} AND taxi.taxi_id = Сhoice.tarif_id AND Cars.car_id = Сhoice.car_id;'.format(n))
+            cursor.execute('Select taxi_name, tarif_name, price from taxi, choice, cars where cars.car_id = {0} AND taxi.taxi_id = choice.tarif_id AND Cars.car_id = choice.car_id;'.format(n))
             data = cursor.fetchall()
     
 
