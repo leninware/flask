@@ -8,7 +8,10 @@ load_dotenv()
 
 
 app = Flask(__name__)
-url = os.getenv("DATABASE_URL")
+# url = os.getenv("DATABASE_URL")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+url = load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 connection = psycopg2.connect(url)
 
