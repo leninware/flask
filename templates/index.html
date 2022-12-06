@@ -1,0 +1,46 @@
+<p>
+    <h4> <label for="exampleSelect1";>Выберете машину, чтобы узнать информацию</label></h4>
+
+    <select id="list">
+        {% for car in cars %}
+            <option value="{{ car[0] }}"> {{ car[1] }} </option>
+        {% endfor %}
+    </select> 
+</p>
+
+<script>
+    var e = document.getElementById("list");
+    var value = e.value;
+</script>    
+
+<button onclick="location.href='http://127.0.0.1:5000/api/car/'+ e.value;">Выбрать</button>
+
+ <!-- {% for car in data %}
+    <p> {{ car[0] }}: {{ car[1] }} ({{ car[2] }}руб/км) </p>
+{% endfor %}
+<p>
+    <h4> <label for="exampleSelect1";>Выберете</label></h4>
+
+    <select id="list">
+            <option value="0"> Audi A4 </option>
+            <option value="1"> Kia Rio </option>
+            <option value="2"> Hyundai Solaris </option>
+            <option value="3"> Toyota Camry </option>
+            <option value="4"> KIA Optima </option>
+            <option value="5"> Ford Mondeo </option>
+            <option value="6"> BMW 5 </option>
+            <option value="7"> BMW 7 </option>
+            <option value="8"> Audi A6 </option>
+            <option value="9"> Hyundai Elantra </option>
+            <option value="9"> Mercedes-Maybach S-class </option>
+    </select> 
+</p>
+
+<script>
+    var e = document.getElementById("list");
+    var value = e.value;
+</script>
+
+<form>
+    <button onClick='location.href="http://127.0.0.1:5000/api/car/e.value"'>Выбрать</button>
+</form> -->
