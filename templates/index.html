@@ -2,8 +2,8 @@
     <h4> <label for="exampleSelect1";>Выберете машину, чтобы узнать информацию</label></h4>
 
     <select id="list">
-        {% for car in cars %}
-            <option value="{{ car[0] }}"> {{ car[1] }} </option>
+        {% for data in data %}
+            <option value="{{ data[0] }}"> {{ data[1] }} </option>
         {% endfor %}
     </select> 
 </p>
