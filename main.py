@@ -8,12 +8,16 @@ load_dotenv()
 
 
 app = Flask(__name__)
+connection = psycopg2.connect(                                                  
+    user = os.getenv("DATABASE_USERNAME"),                                      
+    password = os.getenv("DATABASE_PASSWORD"),                                  
+    host = os.getenv("DATABASE_IP"),                                            
+    port = os.getenv("DATABASE_PORT"),                                          
+    database = os.getenv("DATABASE_NAME")                                       
+)          
 # url = os.getenv("DATABASE_URL")
-BASE_DIR = Path(__file__).resolve().parent.parent
 
-url = load_dotenv(os.path.join(BASE_DIR, ".env"))
-
-connection = psycopg2.connect(url)
+# connection = psycopg2.connect(url)
 
 @app.route('/')
 def index():
