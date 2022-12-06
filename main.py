@@ -9,11 +9,12 @@ load_dotenv()
 
 app = Flask(__name__)
 connection = psycopg2.connect(                                                  
-    user = os.getenv("DATABASE_USERNAME"),                                      
-    password = os.getenv("DATABASE_PASSWORD"),                                  
-    host = os.getenv("DATABASE_IP"),                                            
-    port = os.getenv("DATABASE_PORT"),                                          
-    database = os.getenv("DATABASE_NAME")                                       
+    user = os.getenv("PGUSER"),                                      
+    password = os.getenv("PGPASSWORD"),                                  
+    host = os.getenv("PGHOST"),                                            
+    port = os.getenv("PGPORT"),                                          
+    database = os.getenv("PGDATABASE")   
+    url = os.getenv("DATABASE_URL")                                    
 )          
 # url = os.getenv("DATABASE_URL")
 
