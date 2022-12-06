@@ -13,7 +13,7 @@ connection = psycopg2.connect(
     password = os.getenv("PGPASSWORD"),                                  
     host = os.getenv("PGHOST"),                                            
     port = os.getenv("PGPORT"),                                          
-    database = os.getenv("PGDATABASE")   
+    database = os.getenv("PGDATABASE"),   
     url = os.getenv("DATABASE_URL")                                    
 )          
 # url = os.getenv("DATABASE_URL")
